@@ -1,8 +1,9 @@
-const axios = require("axios");
-const config = require("../config");
+const axios = require("axios").default;
+const {config} = require("../config");
 
 function getUserInfo(token) {
-    axios({
+
+    return axios({
         method: "get",
         url: `${config.apiUrl}/users`,
         headers: {
@@ -11,6 +12,7 @@ function getUserInfo(token) {
       }).then((response) => {
         return response.data;
       });
+    
   }
 
-module.export = getUserInfo
+module.exports = getUserInfo //typo

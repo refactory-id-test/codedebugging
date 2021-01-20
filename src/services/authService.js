@@ -1,9 +1,9 @@
-const config = require("../config");
+const { config } = require("../config");
 
 function redirectUri() {
     return `${config.oauthUrl}/authorize?client_id=${config.clientId}`;
   }
 
-module.export = {
+module.exports = { // typo
     redirectUri: redirectUri
 }
